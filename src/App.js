@@ -3,21 +3,26 @@ import './App.css';
 import reactDom from 'react-dom';
 
 function App() {
-  const person = {
-    name: "Rasel",
-    age: 25
-  }
-  const style ={
-    color: 'black',
-    backgroundColor: 'white'
-  }
   return (
     <div className="App">
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <h3 style={style}>Name: {person.name}</h3>
-        <p style={{backgroundColor: 'cyan', color: 'black'}}>Age: {person.age}</p>
+        <Person></Person>
+        <Person></Person>
+        <Person></Person>
       </header>
+    </div>
+  );
+}
+function Person(){
+  const personStyle ={
+    border: '1px solid yellow',
+    padding: '10px',
+    margin: '10px'
+  }
+  return(
+    <div style={personStyle}>
+      <h3>Name: Md. Rasel Hossain</h3>
+      <h4>Age: 25</h4>
     </div>
   );
 }
